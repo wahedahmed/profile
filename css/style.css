@@ -1,575 +1,603 @@
-/* General Body & Typography */
-body {
-    font-family: 'Droid Sans', sans-serif;
-    color: #333;
-    background-color: #f8f9fa;
-    overflow-x: hidden;
-    line-height: 1.6;
-}
-
-/* Global Transitions for smooth animations */
-* {
-    box-sizing: border-box;
-}
-
-/* Sticky Footer Setup (كما هي) */
-html, body {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-}
-.main-content-wrapper {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-.main-content-wrapper > .container,
-.main-content-wrapper > .row {
-    margin-top: 20px;
-}
-.footer {
-    flex-shrink: 0;
-}
-
-/* General Link and Button Hover Effects (محسّنة) */
-a {
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-a:hover {
-    color: #0056b3;
-    text-decoration: none;
-    transform: translateY(-2px);
-}
-
-.btn {
-    transition: all 0.3s ease-in-out;
-    border-radius: 0.5rem;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-}
-
-/* Creative Hover Effects for Primary Buttons (e.g., Hire Me, Submit) */
-.btn-primary {
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
-}
-
-.btn-primary:hover {
-    color: #fff;
-    transform: translateY(-4px);
-    box-shadow: 0 8px 16px rgba(0, 123, 255, 0.4);
-}
-
-.btn-primary::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-    transition: all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
-    z-index: -1;
-}
-
-.btn-primary:hover::before {
-    left: 100%;
-}
-
-/* Secondary Button Hover Effects (e.g., View My Work) */
-.btn-outline-secondary {
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-    color: #6c757d;
-    border-color: #6c757d;
-    background-color: transparent;
-    box-shadow: 0 2px 4px rgba(108, 117, 125, 0.2);
-}
-
-.btn-outline-secondary:hover {
-    color: #fff;
-    background-color: #6c757d;
-    border-color: #6c757d;
-    transform: translateY(-4px);
-    box-shadow: 0 8px 16px rgba(108, 117, 125, 0.4);
-}
-.btn-outline-secondary::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 0;
-    background-color: rgba(108, 117, 125, 0.2);
-    transition: all 0.4s ease-in-out;
-    z-index: -1;
-    transform-origin: bottom;
-}
-.btn-outline-secondary:hover::before {
-    height: 100%;
-}
-
-
-/* Custom RTL adjustments for Bootstrap (كما هي) */
-[dir="rtl"] .navbar-brand { margin-right: 0 !important; margin-left: 1rem !important; }
-[dir="ltr"] .navbar-brand { margin-left: 0 !important; margin-right: 1rem !important; }
-[dir="rtl"] .ms-lg-3 { margin-right: 1rem !important; margin-left: 0 !important; }
-[dir="ltr"] .ms-lg-3 { margin-left: 1rem !important; margin-right: 0 !important; }
-[dir="rtl"] .text-lg-start { text-align: right !important; }
-[dir="ltr"] .text-lg-start { text-align: left !important; }
-[dir="rtl"] .me-2 { margin-left: 0.5rem !important; margin-right: 0 !important; }
-[dir="ltr"] .me-2 { margin-right: 0.5rem !important; margin-left: 0 !important; }
-[dir="rtl"] .ms-3 { margin-right: 1rem !important; margin-left: 0 !important; }
-[dir="ltr"] .ms-3 { margin-left: 1rem !important; margin-right: 0 !important; }
-/* Skill icon margin handled below for specific classes */
-
-
-/* Navbar Enhancements */
-.navbar {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-.navbar-nav .nav-link {
-    font-weight: 500;
-    padding: 0.5rem 1rem;
-    position: relative;
-    color: rgba(255, 255, 255, 0.75);
-}
-.navbar-nav .nav-link:hover {
-    color: #fff;
-    transform: translateY(-2px);
-}
-.navbar-nav .nav-link.active {
-    color: #fff;
-    font-weight: bold;
-}
-.navbar-nav .nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 0;
-    height: 2px;
-    background-color: #007bff;
-    transition: width 0.3s ease-out, left 0.3s ease-out;
-    transform: translateX(-50%);
-}
-.navbar-nav .nav-link.active::after,
-.navbar-nav .nav-link:hover::after {
-    width: 100%;
-}
-
-
-/* Main Sections Padding */
-.profile-section, .skills-section, .work-section, .resume-section {
-    padding-top: 6rem;
-    padding-bottom: 4rem;
-}
-/* Subtle Animated Background for Sections (اختياري) */
-.profile-section, .skills-section, .work-section, .resume-section {
-    position: relative;
-    overflow: hidden;
-    background-color: #f8f9fa; /* لون خلفية افتراضي */
-}
-/* لتغيير لون الخلفية أو إضافة تدرج ديناميكي */
-.profile-section::before,
-.skills-section::before,
-.work-section::before,
-.resume-section::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle at top left, rgba(0, 123, 255, 0.05), transparent 70%),
-                radial-gradient(circle at bottom right, rgba(200, 220, 255, 0.05), transparent 70%);
-    animation: moveBackground 20s infinite alternate linear;
-    z-index: -1;
-}
-
-@keyframes moveBackground {
-    0% { transform: translate(0, 0); }
-    100% { transform: translate(50%, 50%); }
-}
-
-
-/* Profile Section Specifics (الصورة الشخصية) */
-.profile-img {
-    border: 5px solid #fff;
-    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    border-radius: 50% !important;
-}
-.profile-img:hover {
-    transform: scale(1.05) rotate(3deg);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-}
-
-/* Social Icons (تأثيرات محسّنة) */
-.social-icons {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    background: linear-gradient(to right, #f8f9fa, #e9ecef, #f8f9fa);
-    border-top: 1px solid #dee2e6;
-    border-bottom: 1px solid #dee2e6;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-}
-.social-icons li {
-    margin: 0 12px;
-    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
-}
-.social-icons li:hover {
-    transform: translateY(-8px) scale(1.1);
-    filter: brightness(1.2);
-}
-.social-icons img {
-    max-width: 38px;
-    height: auto;
-    filter: grayscale(100%);
-    transition: filter 0.3s ease-in-out;
-}
-.social-icons img:hover {
-    filter: grayscale(0%);
-}
-
-/* Skills Section Specifics (Updated for IT Skills) */
-.skill-icon {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    border-radius: 8px;
-    color: #fff;
-    font-weight: bold;
-    font-size: 1.5rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.skill-icon:hover {
-    transform: scale(1.1);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-/* Specific colors for new IT skill icons (كما هي) */
-.skill-icon.code-icon { background-color: #007bff; }
-.skill-icon.react-icon { background-color: #61DAFB; color: #282c34; }
-.skill-icon.tools-icon { background-color: #ffc107; color: #212529; }
-.skill-icon.network-icon { background-color: #28a745; }
-.skill-icon.os-icon { background-color: #6610f2; }
-.skill-icon.soft-skill-icon { background-color: #fd7e14; }
-
-/* Animated Progress Bars (with gradient) */
-.progress {
-    height: 25px;
-    background-color: #e9ecef;
-    border-radius: 0.25rem;
-    overflow: hidden;
-}
-.progress-bar {
-    transition: width 1.5s ease-out;
-    background: linear-gradient(to right, #007bff, #00d4ff); /* تدرج لوني أزرق سماوي */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    font-weight: bold;
-    font-size: 0.9rem;
-    background-size: 200% 100%; /* لتمكين تحريك التدرج */
-    animation: gradientMove 3s linear infinite alternate; /* حركة خفيفة للتدرج */
-}
-
-@keyframes gradientMove {
-    0% { background-position: 0% 50%; }
-    100% { background-position: 100% 50%; }
-}
-
-
-/* Work Section Specifics (تأثيرات محسّنة لصور المعرض) */
-.portfolio-item {
-    overflow: hidden;
-    border-radius: 0.5rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08); /* ظل أولي للبطاقات */
-}
-.portfolio-item:hover {
-    transform: translateY(-8px); /* رفع أكثر للبطاقة */
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15); /* ظل أعمق عند التمرير */
-}
-.portfolio-item img {
-    transition: transform 0.5s ease;
-}
-.portfolio-item:hover img {
-    transform: scale(1.1);
-}
-/* Overlay for Portfolio Items */
-.portfolio-item .card-body {
-    position: relative;
-    z-index: 2;
-}
-.portfolio-item::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0);
-    opacity: 0;
-    transition: background-color 0.3s ease, opacity 0.3s ease;
-    z-index: 1;
-}
-.portfolio-item:hover::after {
-    background-color: rgba(0, 0, 0, 0.3);
-    opacity: 1;
-}
-
-/* Resume Section Specifics */
-.resume-section .btn-lg {
-    padding: 15px 30px;
-    font-size: 1.25rem;
-}
-.resume-section .card-header {
-    background-color: #f0f0f0;
-    border-bottom: 1px solid #dee2e6;
-}
-/* Bullet points for lists */
-.resume-section .list-unstyled li {
-    position: relative;
-    padding-inline-end: 1.5rem;
-}
-.resume-section .list-unstyled li::before {
-    content: "\2022";
-    color: #007bff;
-    font-weight: bold;
-    display: inline-block;
-    width: 1em;
-    margin-inline-end: 0.5em;
-    position: absolute;
-    inset-inline-end: 0;
-}
-/* Nested lists for experience duties */
-.resume-section .nested-list {
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    list-style: none;
-    padding-inline-start: 1rem;
-}
-.resume-section .nested-list li {
-    font-size: 0.95rem;
-    color: #555;
-    line-height: 1.4;
-    position: relative;
-    padding-inline-start: 1.2rem;
-}
-.resume-section .nested-list li::before {
-    content: "\2013";
-    color: #007bff;
-    font-weight: bold;
-    position: absolute;
-    inset-inline-start: 0;
-    width: 1em;
-}
-
-
-/* Footer */
-.footer {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
-}
-.footer .btn-link {
-    text-decoration: none;
-    font-weight: bold;
-    color: rgba(255, 255, 255, 0.75) !important;
-}
-.footer .btn-link:hover {
-    text-decoration: underline;
-    color: #fff !important;
-}
-
-/* Contact Modal */
-.modal-header .btn-close {
-    filter: invert(1);
-}
-.modal-body .form-control {
-    border-radius: 0.5rem;
-    box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
-}
-/* Input focus glow effect */
-.modal-body .form-control:focus {
-    border-color: #80bdff;
-    box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25), inset 0 1px 2px rgba(0,0,0,0.15);
-    outline: none; /* إزالة الحدود الافتراضية للتركيز */
-}
-.modal-body .btn-lg {
-    border-radius: 0.5rem;
-}
-
-/* Responsive adjustments (كما هي) */
-@media (max-width: 767.98px) {
-    .profile-section .text-lg-start {
-        text-align: center !important;
-    }
-    .profile-section .col-lg-4, .profile-section .col-lg-7 {
-        margin-bottom: 2rem;
-    }
-    .profile-section .btn {
-        width: 100%;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        margin-bottom: 1rem;
-    }
-}
-
-
-/* Scroll Animations (using opacity and transform for smooth appearance) */
-.scroll-animate {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-.scroll-animate.animated {
-    opacity: 1;
-    transform: translateY(0);
-}
-/* Header animation (for main titles) */
-.scroll-animate.header-animate {
-    transform: translateY(-30px);
-}
-.scroll-animate.header-animate.animated {
-    transform: translateY(0);
-}
-
-
-
-
-  /* إضافة أنماط جديدة للتواصل الاجتماعي */
-  .social-contact {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 20px;
-  }
-  
-  .social-btn {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 20px;
-    border-radius: 10px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    color: white;
-    border: none;
-    width: 100%;
-    text-align: right;
-  }
-  
-  .social-btn i {
-    font-size: 1.8rem;
-    background: rgba(255, 255, 255, 0.2);
-    width: 45px;
-    height: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    transition: all 0.3s ease;
-  }
-  
-  .social-btn:hover i {
-    transform: scale(1.1);
-  }
-  
-  .social-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-  }
-  
-  .whatsapp-btn {
-    background: linear-gradient(135deg, #25d366, #128c7e);
-  }
-  
-  .whatsapp-btn:hover {
-    background: linear-gradient(135deg, #128c7e, #25d366);
-  }
-  
-  .telegram-btn {
-    background: linear-gradient(135deg, #0088cc, #2aabee);
-  }
-  
-  .telegram-btn:hover {
-    background: linear-gradient(135deg, #2aabee, #0088cc);
-  }
-  
-  .facebook-btn {
-    background: linear-gradient(135deg, #3b5998, #4267B2);
-  }
-  
-  .facebook-btn:hover {
-    background: linear-gradient(135deg, #4267B2, #3b5998);
-  }
-  
-  .contact-info {
-    background: #f8f9fa;
-    border-radius: 10px;
-    padding: 15px;
-    margin-top: 25px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    border-left: 4px solid #4267B2;
-  }
-  
-  .contact-info h6 {
-    color: #3b5998;
-    font-weight: 700;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  
-  .contact-info p {
-    color: #555;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin-bottom: 0;
-  }
-  
-  .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
-    padding-top: 15px;
-    border-top: 1px solid #eee;
-  }
-  
-  .social-icons a {
-    color: #3b5998;
-    font-size: 1.5rem;
-    transition: all 0.3s ease;
-  }
-  
-  .social-icons a:hover {
-    transform: translateY(-3px);
-    color: #25d366;
-  }
-  
-  .modal-title i {
-    margin-left: 8px;
-  }
+        /* -------------------- */
+        /* 1. أنماط عامة */
+        /* -------------------- */
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #6c757d;
+            --success-color: #28a745;
+            --info-color: #17a2b8;
+            --warning-color: #ffc107;
+            --danger-color: #dc3545;
+            --light-color: #f8f9fa;
+            --dark-color: #343a40;
+            --whatsapp-color: #25d366;
+            --telegram-color: #0088cc;
+            --facebook-color: #3b5998;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Droid Sans', sans-serif;
+            color: #333;
+            background-color: #f8f9fa;
+            overflow-x: hidden;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        /* -------------------- */
+        /* 2. تخطيط الصفحة */
+        /* -------------------- */
+        .main-content-wrapper {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        
+        .main-content-wrapper > .container,
+        .main-content-wrapper > .row {
+            margin-top: 20px;
+        }
+        
+        .footer {
+            flex-shrink: 0;
+            background-color: var(--dark-color);
+            color: white;
+            padding: 1.5rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+        }
+        
+        /* -------------------- */
+        /* 3. الانتقالات والتأثيرات */
+        /* -------------------- */
+        a, .btn {
+            transition: all 0.3s ease-in-out;
+        }
+        
+        a:hover {
+            color: #0056b3;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+        
+        /* تأثيرات الأزرار */
+        .btn {
+            border-radius: 0.5rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+        
+        .btn-primary {
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+        }
+        
+        .btn-primary:hover {
+            color: #fff;
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0, 123, 255, 0.4);
+        }
+        
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+            z-index: -1;
+        }
+        
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+        
+        .btn-outline-secondary {
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            color: var(--secondary-color);
+            border-color: var(--secondary-color);
+            background-color: transparent;
+            box-shadow: 0 2px 4px rgba(108, 117, 125, 0.2);
+        }
+        
+        .btn-outline-secondary:hover {
+            color: #fff;
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(108, 117, 125, 0.4);
+        }
+        
+        /* -------------------- */
+        /* 4. التعديلات للغة العربية */
+        /* -------------------- */
+        [dir="rtl"] .navbar-brand { 
+            margin-right: 0 !important; 
+            margin-left: 1rem !important; 
+        }
+        
+        [dir="ltr"] .navbar-brand { 
+            margin-left: 0 !important; 
+            margin-right: 1rem !important; 
+        }
+        
+        [dir="rtl"] .ms-lg-3 { 
+            margin-right: 1rem !important; 
+            margin-left: 0 !important; 
+        }
+        
+        [dir="ltr"] .ms-lg-3 { 
+            margin-left: 1rem !important; 
+            margin-right: 0 !important; 
+        }
+        
+        [dir="rtl"] .text-lg-start { 
+            text-align: right !important; 
+        }
+        
+        [dir="ltr"] .text-lg-start { 
+            text-align: left !important; 
+        }
+        
+        [dir="rtl"] .me-2 { 
+            margin-left: 0.5rem !important; 
+            margin-right: 0 !important; 
+        }
+        
+        [dir="ltr"] .me-2 { 
+            margin-right: 0.5rem !important; 
+            margin-left: 0 !important; 
+        }
+        
+        [dir="rtl"] .ms-3 { 
+            margin-right: 1rem !important; 
+            margin-left: 0 !important; 
+        }
+        
+        [dir="ltr"] .ms-3 { 
+            margin-left: 1rem !important; 
+            margin-right: 0 !important; 
+        }
+        
+        /* -------------------- */
+        /* 5. شريط التنقل */
+        /* -------------------- */
+        .navbar {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-nav .nav-link {
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            position: relative;
+            color: rgba(255, 255, 255, 0.75);
+        }
+        
+        .navbar-nav .nav-link:hover {
+            color: #fff;
+            transform: translateY(-2px);
+        }
+        
+        .navbar-nav .nav-link.active {
+            color: #fff;
+            font-weight: bold;
+        }
+        
+        .navbar-nav .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: width 0.3s ease-out, left 0.3s ease-out;
+            transform: translateX(-50%);
+        }
+        
+        .navbar-nav .nav-link.active::after,
+        .navbar-nav .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        /* -------------------- */
+        /* 6. الأقسام الرئيسية */
+        /* -------------------- */
+        .profile-section, 
+        .skills-section, 
+        .work-section, 
+        .resume-section {
+            padding-top: 6rem;
+            padding-bottom: 4rem;
+            position: relative;
+            overflow: hidden;
+            background-color: #f8f9fa;
+        }
+        
+        .profile-section::before,
+        .skills-section::before,
+        .work-section::before,
+        .resume-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at top left, rgba(0, 123, 255, 0.05), transparent 70%),
+                        radial-gradient(circle at bottom right, rgba(200, 220, 255, 0.05), transparent 70%);
+            animation: moveBackground 20s infinite alternate linear;
+            z-index: -1;
+        }
+        
+        @keyframes moveBackground {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50%, 50%); }
+        }
+        
+        /* -------------------- */
+        /* 7. قسم الملف الشخصي */
+        /* -------------------- */
+        .profile-img {
+            border: 5px solid #fff;
+            transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            border-radius: 50% !important;
+            max-width: 300px;
+            width: 100%;
+        }
+        
+        .profile-img:hover {
+            transform: scale(1.05) rotate(3deg);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        /* -------------------- */
+        /* 8. الأيقونات الاجتماعية */
+        /* -------------------- */
+        .social-icons {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            background: linear-gradient(to right, #f8f9fa, #e9ecef, #f8f9fa);
+            border-top: 1px solid #dee2e6;
+            border-bottom: 1px solid #dee2e6;
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+        }
+        
+        .social-icons li {
+            margin: 0 12px;
+            transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+        }
+        
+        .social-icons li:hover {
+            transform: translateY(-8px) scale(1.1);
+            filter: brightness(1.2);
+        }
+        
+        .social-icons img {
+            max-width: 38px;
+            height: auto;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease-in-out;
+        }
+        
+        .social-icons img:hover {
+            filter: grayscale(0%);
+        }
+        
+        /* -------------------- */
+        /* 9. قسم المهارات */
+        /* -------------------- */
+        .skill-icon {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 8px;
+            color: #fff;
+            font-weight: bold;
+            font-size: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .skill-icon:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* ألوان الأيقونات حسب نوع المهارة */
+        .skill-icon.code-icon { background-color: var(--primary-color); }
+        .skill-icon.react-icon { background-color: #61DAFB; color: #282c34; }
+        .skill-icon.tools-icon { background-color: var(--warning-color); color: #212529; }
+        .skill-icon.network-icon { background-color: var(--success-color); }
+        .skill-icon.os-icon { background-color: #6610f2; }
+        .skill-icon.soft-skill-icon { background-color: #fd7e14; }
+        
+        /* شريط التقدم */
+        .progress {
+            height: 25px;
+            background-color: #e9ecef;
+            border-radius: 0.25rem;
+            overflow: hidden;
+        }
+        
+        .progress-bar {
+            transition: width 1.5s ease-out;
+            background: linear-gradient(to right, var(--primary-color), #00d4ff);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-weight: bold;
+            font-size: 0.9rem;
+            background-size: 200% 100%;
+            animation: gradientMove 3s linear infinite alternate;
+        }
+        
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+        
+        /* -------------------- */
+        /* 10. قسم الأعمال */
+        /* -------------------- */
+        .portfolio-item {
+            overflow: hidden;
+            border-radius: 0.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        
+        .portfolio-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .portfolio-item img {
+            transition: transform 0.5s ease;
+        }
+        
+        .portfolio-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* -------------------- */
+        /* 11. قسم السيرة الذاتية */
+        /* -------------------- */
+        .resume-section .btn-lg {
+            padding: 15px 30px;
+            font-size: 1.25rem;
+        }
+        
+        .resume-section .card-header {
+            background-color: #f0f0f0;
+            border-bottom: 1px solid #dee2e6;
+        }
+        
+        /* نقاط القائمة */
+        .resume-section .list-unstyled li {
+            position: relative;
+            padding-inline-end: 1.5rem;
+        }
+        
+        .resume-section .list-unstyled li::before {
+            content: "\2022";
+            color: var(--primary-color);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-inline-end: 0.5em;
+            position: absolute;
+            inset-inline-end: 0;
+        }
+        
+        /* -------------------- */
+        /* 12. نافذة التواصل */
+        /* -------------------- */
+        .modal-header .btn-close {
+            filter: invert(1);
+        }
+        
+        .modal-body .form-control {
+            border-radius: 0.5rem;
+            box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .modal-body .form-control:focus {
+            border-color: #80bdff;
+            box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25), inset 0 1px 2px rgba(0,0,0,0.15);
+            outline: none;
+        }
+        
+        .modal-body .btn-lg {
+            border-radius: 0.5rem;
+        }
+        
+        /* -------------------- */
+        /* 13. التواصل الاجتماعي */
+        /* -------------------- */
+        .social-contact {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 20px;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            color: white;
+            border: none;
+            width: 100%;
+            text-align: right;
+        }
+        
+        .social-btn i {
+            font-size: 1.8rem;
+            background: rgba(255, 255, 255, 0.2);
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+        
+        .social-btn:hover i {
+            transform: scale(1.1);
+        }
+        
+        .social-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        
+        .whatsapp-btn {
+            background: linear-gradient(135deg, var(--whatsapp-color), #128c7e);
+        }
+        
+        .whatsapp-btn:hover {
+            background: linear-gradient(135deg, #128c7e, var(--whatsapp-color));
+        }
+        
+        .telegram-btn {
+            background: linear-gradient(135deg, var(--telegram-color), #2aabee);
+        }
+        
+        .telegram-btn:hover {
+            background: linear-gradient(135deg, #2aabee, var(--telegram-color));
+        }
+        
+        .facebook-btn {
+            background: linear-gradient(135deg, var(--facebook-color), #4267B2);
+        }
+        
+        .facebook-btn:hover {
+            background: linear-gradient(135deg, #4267B2, var(--facebook-color));
+        }
+        
+        .contact-info {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 25px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            border-left: 4px solid var(--facebook-color);
+        }
+        
+        .contact-info h6 {
+            color: var(--facebook-color);
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .contact-info p {
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+        
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+        
+        .social-icons a {
+            color: var(--facebook-color);
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            transform: translateY(-3px);
+            color: var(--whatsapp-color);
+        }
+        
+        .modal-title i {
+            margin-left: 8px;
+        }
+        
+        /* -------------------- */
+        /* 14. التكيف مع الأجهزة */
+        /* -------------------- */
+        @media (max-width: 767.98px) {
+            .profile-section .text-lg-start {
+                text-align: center !important;
+            }
+            
+            .profile-section .col-lg-4, 
+            .profile-section .col-lg-7 {
+                margin-bottom: 2rem;
+            }
+            
+            .profile-section .btn {
+                width: 100%;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                margin-bottom: 1rem;
+            }
+        }
+        
+        /* -------------------- */
+        /* 15. تأثيرات التمرير */
+        /* -------------------- */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        
+        .scroll-animate.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .scroll-animate.header-animate {
+            transform: translateY(-30px);
+        }
+        
+        .scroll-animate.header-animate.animated {
+            transform: translateY(0);
