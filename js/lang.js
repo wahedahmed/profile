@@ -130,8 +130,23 @@ const translations = {
 
         contactEmail: "wahedahmed.wa22@gmail.com", // إضافة الإيميل من الـ CV
         contactWhatsapp: "0590525341", // إضافة الواتساب من الـ CV 
-        contactLocation: "الخبر الشمالية، المملكة العربية السعودية" // إضافة الموقع من الـ CV 
+        contactLocation: "الخبر الشمالية، المملكة العربية السعودية",
+        
+               // Contact Modal - Social Media Version
+        contactDesc: "اختر إحدى الوسائل التالية للتواصل معي مباشرة",
+        contactInfo: "يمكنك التواصل معي مباشرة عبر الضغط على أي من الأزرار أعلاه. سأكون سعيداً بالرد على استفساراتك في أقرب وقت ممكن. أوقات التواصل من 9 صباحاً حتى 5 مساءً بتوقيت السعودية.",
+        whatsappBtnText: "التواصل عبر واتساب",
+        telegramBtnText: "التواصل عبر تلجرام",
+        facebookBtnText: "التواصل عبر فيس بوك",
+        contactInfoTitle: "معلومات التواصل",
+        contactInfoContent: "يمكنك التواصل معي مباشرة عبر الضغط على أي من الأزرار أعلاه. سأكون سعيداً بالرد على استفساراتك في أقرب وقت ممكن. أوقات التواصل من 9 صباحاً حتى 5 مساءً بتوقيت السعودية.",
+        socialIconsTitle: "وسائل التواصل الأخرى"// إضافة الموقع من الـ CV 
     },
+
+
+
+
+
     en: {
         // Navbar
         navProfile: "Profile",
@@ -260,7 +275,17 @@ const translations = {
 
         contactEmail: "wahedahmed.wa22@gmail.com",
         contactWhatsapp: "0590525341", // 
-        contactLocation: "Al-Khobar Al-Shamalia, Saudi Arabia" // 
+        contactLocation: "Al-Khobar Al-Shamalia, Saudi Arabia", //
+        
+                // Contact Modal - Social Media Version
+        contactDesc: "Choose one of the following methods to contact me directly",
+        contactInfo: "You can contact me directly by clicking on any of the buttons above. I will be happy to respond to your inquiries as soon as possible. Contact hours are from 9 AM to 5 PM Saudi time.",
+        whatsappBtnText: "Contact via WhatsApp",
+        telegramBtnText: "Contact via Telegram",
+        facebookBtnText: "Contact via Facebook",
+        contactInfoTitle: "Contact Information",
+        contactInfoContent: "You can contact me directly by clicking on any of the buttons above. I will be happy to respond to your inquiries as soon as possible. Contact hours are from 9 AM to 5 PM Saudi time.",
+        socialIconsTitle: "Other Social Media"
     }
 };
 

@@ -451,3 +451,125 @@ a:hover {
 .scroll-animate.header-animate.animated {
     transform: translateY(0);
 }
+
+
+
+
+  /* إضافة أنماط جديدة للتواصل الاجتماعي */
+  .social-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    color: white;
+    border: none;
+    width: 100%;
+    text-align: right;
+  }
+  
+  .social-btn i {
+    font-size: 1.8rem;
+    background: rgba(255, 255, 255, 0.2);
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
+  
+  .social-btn:hover i {
+    transform: scale(1.1);
+  }
+  
+  .social-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  }
+  
+  .whatsapp-btn {
+    background: linear-gradient(135deg, #25d366, #128c7e);
+  }
+  
+  .whatsapp-btn:hover {
+    background: linear-gradient(135deg, #128c7e, #25d366);
+  }
+  
+  .telegram-btn {
+    background: linear-gradient(135deg, #0088cc, #2aabee);
+  }
+  
+  .telegram-btn:hover {
+    background: linear-gradient(135deg, #2aabee, #0088cc);
+  }
+  
+  .facebook-btn {
+    background: linear-gradient(135deg, #3b5998, #4267B2);
+  }
+  
+  .facebook-btn:hover {
+    background: linear-gradient(135deg, #4267B2, #3b5998);
+  }
+  
+  .contact-info {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 25px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    border-left: 4px solid #4267B2;
+  }
+  
+  .contact-info h6 {
+    color: #3b5998;
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .contact-info p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+  }
+  
+  .social-icons a {
+    color: #3b5998;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    transform: translateY(-3px);
+    color: #25d366;
+  }
+  
+  .modal-title i {
+    margin-left: 8px;
+  }
