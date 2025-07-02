@@ -73,7 +73,7 @@ const translations = {
     project2Desc: "صفحة ويب احترافية متعددة اللغات لعرض السيرة الذاتية والتواصل بطريقة جذابة وسهلة الاستخدام.",
     project3Title: "لوحة تحكم للدعم الفني",
     project3Desc: "تطبيق ويب بسيط باستخدام HTML/CSS/JS لتسجيل البلاغات، إدارة التذاكر، وتخصيص المهام.",
-    btnViewMore: "عرض التفاصيل"
+    btnViewMore: " قريبا "
   },
 
   en: {
@@ -150,7 +150,7 @@ const translations = {
     project2Desc: "Multilingual responsive CV site with modern layout and direct contact options.",
     project3Title: "Support Dashboard",
     project3Desc: "Simple web dashboard with HTML/CSS/JS for support ticketing and task tracking.",
-    btnViewMore: "View Details"
+    btnViewMore: "Soon"
   }
 };
 
