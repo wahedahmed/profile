@@ -1,253 +1,166 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<title data-lang-key="pageTitleSkills">Mini Portfolio | المهارات</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-<link href="font/css/fontello.css" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Droid+Sans:400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link href="css/style.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-lang-key="pageTitleSkills">Mini Portfolio | المهارات</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/lang.js" defer></script>
+  <style>
+    body.dark-mode {
+      background-color: #121212;
+      color: #f0f0f0;
+    }
+    .dark-mode .bg-dark {
+      background-color: #1f1f1f !important;
+    }
+    .skill-card {
+      transition: transform 0.3s ease;
+    }
+    .skill-card:hover {
+      transform: scale(1.03);
+    }
+    #themeToggle {
+      background: none;
+      border: none;
+      font-size: 1.2rem;
+      color: #ffc107;
+    }
+  </style>
 </head>
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
   <div class="container">
     <a class="navbar-brand" href="index.html">
-        <img src="img/user.jpg" alt="اسمك هنا" width="40" height="40" class="d-inline-block align-text-top rounded-circle me-2">
+      <img src="img/user.jpg" alt="وحيد أحمد" width="40" height="40" class="rounded-circle me-2">
+      <span class="fw-bold">وحيد أحمد</span>
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html" data-lang-key="navProfile"><i class="icon-user"></i> الملف الشخصي</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="skills.html" data-lang-key="navSkills"><i class="icon-trophy"></i> المهارات</a>
-        </li>
-        <!-- <li class="nav-item">
-          <a class="nav-link" href="work.html" data-lang-key="navWork"><i class="icon-picture"></i> الأعمال</a>
-        </li> -->
-        <li class="nav-item">
-          <a class="nav-link" href="resume.html" data-lang-key="navResume"><i class="icon-doc-text"></i> السيرة الذاتية</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#myModal" data-bs-toggle="modal" data-lang-key="navContact"><i class="icon-mail"></i> تواصل</a>
-        </li>
-        <li class="nav-item dropdown ms-lg-3">
-          <a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-lang-key="navLang">
-            اللغة
-          </a>
-          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="langDropdown">
-            <li><a class="dropdown-item" href="#" data-lang-set="ar">العربية</a></li>
-            <li><a class="dropdown-item" href="#" data-lang-set="en">English</a></li>
-          </ul>
-        </li>
-      </ul>
+ <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="index.html" data-lang-key="navProfile">الملف الشخصي</a></li>
+          <li class="nav-item"><a class="nav-link" href="skills.html" data-lang-key="navSkills">المهارات</a></li>
+          <li class="nav-item"><a class="nav-link" href="resume.html" data-lang-key="navResume">السيرة الذاتية</a></li>
+          <li class="nav-item"><a class="nav-link" href="work.html" data-lang-key="navWork">الأعمال</a></li>
+          <li class="nav-item"><a class="nav-link" href="#myModal" data-bs-toggle="modal" data-lang-key="navContact">تواصل</a></li>
+          <li class="nav-item dropdown ms-lg-3">
+            <a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-lang-key="navLang">اللغة</a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="langDropdown">
+              <li><a class="dropdown-item" href="#" data-lang-set="ar">العربية</a></li>
+              <li><a class="dropdown-item" href="#" data-lang-set="en">English</a></li>
+            </ul>
+          </li>
+          <!-- <li class="nav-item d-flex align-items-center ms-3">
+            <button id="themeToggle" aria-label="Toggle Theme"><i class="fas fa-moon"></i></button>
+          </li> -->
+        </ul>
     </div>
   </div>
 </nav>
 
-<div class="main-content-wrapper">
-  <div class="container py-5 skills-section">
-    <h2 class="text-center mb-5 display-5 fw-bold scroll-animate header-animate" data-lang-key="skillsHeading">مهاراتي</h2>
+<div class="container py-5">
+  <h2 class="text-center mb-5 fw-bold" data-lang-key="skillsHeading">مهاراتي</h2>
+  <div class="row g-4">
 
-    <div class="row g-4">
-      <div class="col-lg-6 col-md-12">
-        <div class="card h-100 shadow-sm border-0 scroll-animate">
-          <div class="card-body">
-            <h4 class="card-title mb-3 d-flex justify-content-between align-items-center">
-              <span class="skill-icon code-icon me-2">&lt;/&gt;</span> <span data-lang-key="skillProgrammingLang">لغات البرمجة</span> <span class="badge bg-primary fs-6">90%</span>
-            </h4>
-            <p class="card-text text-muted" data-lang-key="skillProgrammingLangDesc">
-              خبرة واسعة في JavaScript، HTML، CSS، و SQL لتطوير تطبيقات ويب قوية وواجهات مستخدم تفاعلية.
-            </p>
-            <div class="progress" role="progressbar" aria-label="Programming skill" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="height: 25px;">
-              <div class="progress-bar bg-info" style="width: 90%"></div>
-            </div>
-          </div>
+    <!-- نظام التشغيل -->
+    <div class="col-md-6">
+      <div class="card skill-card shadow-sm border-0 h-100">
+        <div class="card-body">
+          <h5 class="card-title"><i class="fas fa-desktop me-2"></i> <span data-lang-key="skillOS">أنظمة التشغيل</span></h5>
+          <p class="card-text" data-lang-key="skillOSDesc">خبرة قوية في Windows و Linux، وإدارة أنظمة تشغيل متعددة.</p>
         </div>
       </div>
-
-      <div class="col-lg-6 col-md-12">
-        <div class="card h-100 shadow-sm border-0 scroll-animate">
-          <div class="card-body">
-            <h4 class="card-title mb-3 d-flex justify-content-between align-items-center">
-              <span class="skill-icon react-icon me-2">R</span> <span data-lang-key="skillFrameworksLibs">أطر العمل والمكتبات</span> <span class="badge bg-primary fs-6">85%</span>
-            </h4>
-            <p class="card-text text-muted" data-lang-key="skillFrameworksLibsDesc">
-              إتقان استخدام React لبناء واجهات مستخدم معيارية وقابلة للتوسع، وBootstrap لتصميم متجاوب وسريع.
-            </p>
-            <div class="progress" role="progressbar" aria-label="Frameworks skill" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="height: 25px;">
-              <div class="progress-bar bg-info" style="width: 85%"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-6 col-md-12">
-        <div class="card h-100 shadow-sm border-0 scroll-animate">
-          <div class="card-body">
-            <h4 class="card-title mb-3 d-flex justify-content-between align-items-center">
-              <span class="skill-icon tools-icon me-2">⚙️</span> <span data-lang-key="skillDevToolsSystems">أدوات وأنظمة التطوير</span> <span class="badge bg-primary fs-6">80%</span>
-            </h4>
-            <p class="card-text text-muted" data-lang-key="skillDevToolsSystemsDesc">
-              استخدام Git لإدارة الإصدارات، Active Directory لإدارة المستخدمين، وOffice 365 للإنتاجية المؤسسية.
-            </p>
-            <div class="progress" role="progressbar" aria-label="Dev Tools skill" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="height: 25px;">
-              <div class="progress-bar bg-info" style="width: 80%"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-6 col-md-12">
-        <div class="card h-100 shadow-sm border-0 scroll-animate">
-          <div class="card-body">
-            <h4 class="card-title mb-3 d-flex justify-content-between align-items-center">
-              <span class="skill-icon network-icon me-2">🌐</span> <span data-lang-key="skillNetworkingSecurity">الشبكات والأمن</span> <span class="badge bg-primary fs-6">75%</span>
-            </h4>
-            <p class="card-text text-muted" data-lang-key="skillNetworkingSecurityDesc">
-              فهم أساسيات LAN/WAN، DHCP، DNS، VPN، وإدارة حلول الأمن مثل برامج مكافحة الفيروسات والنسخ الاحتياطي للبيانات.
-            </p>
-            <div class="progress" role="progressbar" aria-label="Networking skill" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="height: 25px;">
-              <div class="progress-bar bg-info" style="width: 75%"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-       <div class="col-lg-6 col-md-12">
-        <div class="card h-100 shadow-sm border-0 scroll-animate">
-          <div class="card-body">
-            <h4 class="card-title mb-3 d-flex justify-content-between align-items-center">
-              <span class="skill-icon os-icon me-2">🖥️</span> <span data-lang-key="skillOSTroubleshooting">أنظمة التشغيل واستكشاف الأخطاء</span> <span class="badge bg-primary fs-6">95%</span>
-            </h4>
-            <p class="card-text text-muted" data-lang-key="skillOSTroubleshootingDesc">
-              خبرة قوية في Windows و Linux، بالإضافة إلى مهارات تحليلية ممتازة في استكشاف الأخطاء وإصلاحها وحل المشكلات التقنية المعقدة.
-            </p>
-            <div class="progress" role="progressbar" aria-label="OS skill" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="height: 25px;">
-              <div class="progress-bar bg-info" style="width: 95%"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-       <div class="col-lg-6 col-md-12">
-        <div class="card h-100 shadow-sm border-0 scroll-animate">
-          <div class="card-body">
-            <h4 class="card-title mb-3 d-flex justify-content-between align-items-center">
-              <span class="skill-icon soft-skill-icon me-2">🤝</span> <span data-lang-key="skillCompetenciesSoft">الكفاءات والمهارات الشخصية</span> <span class="badge bg-primary fs-6">90%</span>
-            </h4>
-            <p class="card-text text-muted" data-lang-key="skillCompetenciesSoftDesc">
-              مهارات في تحليلات البيانات، منهجيات Agile، الأمن السيبراني، الحوسبة السحابية، بالإضافة إلى التواصل الفعال وحل المشكلات والعمل الجماعي.
-            </p>
-            <div class="progress" role="progressbar" aria-label="Competencies skill" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="height: 25px;">
-              <div class="progress-bar bg-info" style="width: 90%"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
     </div>
-  </div>
 
-  <div class="row social bg-light py-3 scroll-animate">
-    <div class="col-12 text-center">
-      <ul class="list-inline my-0">
-        <li class="list-inline-item mx-2"><a href="#" aria-label="Facebook"><img src="img/fb.png" alt="Facebook" width="32"></a></li>
-        <li class="list-inline-item mx-2"><a href="#" aria-label="Twitter"><img src="img/tw.png" alt="Twitter" width="32"></a></li>
-        <li class="list-inline-item mx-2"><a href="#" aria-label="Google Plus"><img src="img/go.png" alt="Google Plus" width="32"></a></li>
-        <li class="list-inline-item mx-2"><a href="#" aria-label="Pinterest"><img src="img/pin.png" alt="Pinterest" width="32"></a></li>
-        <li class="list-inline-item mx-2"><a href="#" aria-label="StumbleUpon"><img src="img/st.png" alt="StumbleUpon" width="32"></a></li>
-        <li class="list-inline-item mx-2"><a href="#" aria-label="Dribbble"><img src="img/dr.png" alt="Dribbble" width="32"></a></li>
-      </ul>
+    <!-- الشبكات -->
+    <div class="col-md-6">
+      <div class="card skill-card shadow-sm border-0 h-100">
+        <div class="card-body">
+          <h5 class="card-title"><i class="fas fa-network-wired me-2"></i> <span data-lang-key="skillNetworking">الشبكات</span></h5>
+          <p class="card-text" data-lang-key="skillNetworkingDesc">LAN/WAN، DHCP، DNS، VPN وإدارة الشبكات بشكل آمن وفعال.</p>
+        </div>
+      </div>
     </div>
+
+    <!-- الأنظمة -->
+    <div class="col-md-6">
+      <div class="card skill-card shadow-sm border-0 h-100">
+        <div class="card-body">
+          <h5 class="card-title"><i class="fas fa-server me-2"></i> <span data-lang-key="skillSystems">الأنظمة</span></h5>
+          <p class="card-text" data-lang-key="skillSystemsDesc">إدارة Active Directory و Office 365 و Windows Server.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- الأمن السيبراني -->
+    <div class="col-md-6">
+      <div class="card skill-card shadow-sm border-0 h-100">
+        <div class="card-body">
+          <h5 class="card-title"><i class="fas fa-shield-alt me-2"></i> <span data-lang-key="skillSecurity">الأمن</span></h5>
+          <p class="card-text" data-lang-key="skillSecurityDesc">التحكم في الوصول، إدارة مضاد الفيروسات، النسخ الاحتياطي وتأمين البيانات.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- أدوات الدعم -->
+    <div class="col-md-6">
+      <div class="card skill-card shadow-sm border-0 h-100">
+        <div class="card-body">
+          <h5 class="card-title"><i class="fas fa-tools me-2"></i> <span data-lang-key="skillSupportTools">أدوات الدعم</span></h5>
+          <p class="card-text" data-lang-key="skillSupportToolsDesc">Remote Desktop، أنظمة التذاكر مثل Jira.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- عام -->
+    <div class="col-md-6">
+      <div class="card skill-card shadow-sm border-0 h-100">
+        <div class="card-body">
+          <h5 class="card-title"><i class="fas fa-code me-2"></i> <span data-lang-key="skillGeneral">مهارات عامة</span></h5>
+          <p class="card-text" data-lang-key="skillGeneralDesc">توثيق تقني، Microsoft Office، تحليل الأعطال، حل المشكلات التقنية.</p>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
-
-<div class="footer bg-dark text-white py-3 mt-auto">
-  <div class="container d-flex justify-content-between align-items-center">
-    <p class="mb-0 text-muted" data-lang-key="footerCopyright">&copy; 2024 جميع الحقوق محفوظة.</p>
-    <p class="mb-0">
-      <a href="#myModal" role="button" class="btn btn-link text-white-50" data-bs-toggle="modal" data-lang-key="footerContact"> <i class="icon-mail me-1"></i> تواصل معي</a>
-    </p>
-  </div>
-</div>
-
-
-
-<!-- تعديل نموذج التواصل -->
-<div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header bg-dark text-white">
-        <h5 class="modal-title" id="myModalLabel" data-lang-key="modalTitle">
-          <i class="fas fa-comments me-2"></i> تواصل معي
-        </h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <!-- وصف التواصل -->
-        <p class="text-center mb-4" style="font-size: 1.1rem; color: #555;" data-lang-key="contactDesc">
-          اختر إحدى الوسائل التالية للتواصل معي مباشرة
-        </p>
-        
-        <div class="social-contact">
-          <!-- زر واتساب -->
-          <a href="https://wa.me/+966590525341" target="_blank" class="social-btn whatsapp-btn">
-            <span data-lang-key="whatsappBtnText">
-              <i class="fab fa-whatsapp"></i> التواصل عبر واتساب
-            </span>
-          </a>
-          
-          <!-- زر تلجرام -->
-          <a href="https://t.me/waheedahmed001" target="_blank" class="social-btn telegram-btn">
-            <span data-lang-key="telegramBtnText">
-              <i class="fab fa-telegram"></i> التواصل عبر تلجرام
-            </span>
-          </a>
-          
-          <!-- زر فيس بوك -->
-          <a href="https://www.facebook.com/wahed.ahmed.96485" target="_blank" class="social-btn facebook-btn">
-            <span data-lang-key="facebookBtnText">
-              <i class="fab fa-facebook"></i> التواصل عبر فيس بوك
-            </span>
-          </a>
+  <div id="myModal" class="modal fade" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-dark text-white">
+          <h5 class="modal-title" data-lang-key="modalTitle"><i class="fas fa-comments me-2"></i> تواصل معي</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
         </div>
-        
-        <div class="contact-info">
-          <!-- عنوان معلومات التواصل -->
-          <h6 data-lang-key="contactInfoTitle">
-            <i class="fas fa-info-circle"></i> معلومات التواصل
-          </h6>
-          <!-- محتوى معلومات التواصل -->
-          <p data-lang-key="contactInfoContent">
-            يمكنك التواصل معي مباشرة عبر الضغط على أي من الأزرار أعلاه. سأكون سعيداً بالرد على استفساراتك في أقرب وقت ممكن. أوقات التواصل من 9 صباحاً حتى 5 مساءً بتوقيت السعودية.
-          </p>
-        </div>
-        
-        <div class="social-icons">
-          <!-- أيقونات التواصل الاجتماعي -->
-          <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-          <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-          <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-          <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+        <div class="modal-body text-center">
+          <p class="mb-4" data-lang-key="contactDesc">اختر وسيلة للتواصل</p>
+          <a href="https://wa.me/+966590525341" target="_blank" class="btn btn-success mb-2" data-lang-key="whatsappBtnText"><i class="fab fa-whatsapp"></i> واتساب</a>
+          <a href="https://t.me/waheedahmed001" target="_blank" class="btn btn-primary mb-2" data-lang-key="telegramBtnText"><i class="fab fa-telegram"></i> تلجرام</a>
+          <a href="mailto:wahedahmed.wa22@gmail.com" class="btn btn-dark" data-lang-key="emailContact"><i class="fas fa-envelope"></i> بريد إلكتروني</a>
         </div>
       </div>
     </div>
   </div>
-</div>
 
+<footer class="footer bg-dark text-white py-3 mt-auto">
+  <div class="container text-center">
+    <p class="mb-0" data-lang-key="footerCopyright">&copy; 2025 جميع الحقوق محفوظة - وحيد أحمد</p>
+  </div>
+</footer>
 
-<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<script src="js/lang.js"></script>
-<script src="js/animations.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const toggleBtn = document.getElementById('themeToggle');
+  toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    const icon = toggleBtn.querySelector('i');
+    icon.classList.toggle('fa-moon');
+    icon.classList.toggle('fa-sun');
+  });
+</script>
 </body>
 </html>
