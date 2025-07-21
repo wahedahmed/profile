@@ -67,13 +67,13 @@ const translations = {
     langEnglish: "الإنجليزية - محترف",
 
     workHeading: "نماذج من أعمالي",
-    project1Title: "نظام إدارة مصنع ألبان",
-    project1Desc: "مشروع تخرجي: نظام متكامل لإدارة العمليات داخل مصنع ألبان يشمل المشتريات، الإنتاج، التوزيع، والتقارير.",
-    project2Title: "موقع سيرة ذاتية تفاعلي",
-    project2Desc: "صفحة ويب احترافية متعددة اللغات لعرض السيرة الذاتية والتواصل بطريقة جذابة وسهلة الاستخدام.",
-    project3Title: "لوحة تحكم للدعم الفني",
-    project3Desc: "تطبيق ويب بسيط باستخدام HTML/CSS/JS لتسجيل البلاغات، إدارة التذاكر، وتخصيص المهام.",
-    btnViewMore: " قريبا "
+    project1Title: "نظام إدارة  جمعيه خيرية",
+    project1Desc: "  نظام متكامل لإدارة العمليات داخل  الجمعية الخيريه يشمل المشتريات،التبرعات  ، التوزيع، والتقارير.",
+    project2Title: "موقع مطعم  تفاعلي",
+    project2Desc: "  صفحة ويب احترافية لعرض اشهر وجبات المطعم وأراء العملاء والتواصل بطريقة جذابة وسهلة الاستخدام.",
+    project3Title: " موقع مكتبات  ",
+    project3Desc: "تصميم بسيط يعرض تاريخ المكتبه و بعض التفاصيل وافصل الكتب الموجوده",
+    btnViewMore: " شاهد "
   },
 
   en: {
@@ -144,13 +144,13 @@ const translations = {
     langEnglish: "English - Professional",
 
     workHeading: "My Portfolio",
-    project1Title: "Dairy Factory Management System",
-    project1Desc: "Graduation project: Full system to manage production, purchasing, distribution, and reporting in a dairy factory.",
-    project2Title: "Interactive Resume Website",
-    project2Desc: "Multilingual responsive CV site with modern layout and direct contact options.",
-    project3Title: "Support Dashboard",
-    project3Desc: "Simple web dashboard with HTML/CSS/JS for support ticketing and task tracking.",
-    btnViewMore: "Soon"
+    project1Title: "Charity Association System",
+    project1Desc: " Full system to manage Donations, purchasing, distribution, and reporting in a Charity Association .",
+    project2Title: "Interactive restaurant website",
+    project2Desc: "A professional website to showcase your restaurant's most popular meals, customer reviews, and communicate in an attractive and easy-to-use way..",
+    project3Title: "Libraries website",
+    project3Desc: "Simple design showing the history of the library and some details of the existing books..",
+    btnViewMore: "View"
   }
 };
 
