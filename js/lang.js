@@ -94,7 +94,7 @@ const translations = {
     heroTitle: "IT Specialist",
     heroAboutMe: "Experienced IT Specialist with a background in user support, system and network management, and performance optimization. Skilled in Windows, Linux, networking, cybersecurity, and support tools like Jira.",
     btnHireMe: "Hire Me",
-btnHireMe2: " my wroks ",
+    btnHireMe2: " my wroks ",
     btnMyWork: "Resume",
 
     footerCopyright: "© 2025 All rights reserved - Wahed Ahmed",
