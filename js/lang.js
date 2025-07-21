@@ -16,6 +16,7 @@ const translations = {
     heroTitle: "أخصائي تقنية معلومات",
     heroAboutMe: "أخصائي تقنية معلومات مع خبرة واسعة في دعم المستخدمين، إدارة الأنظمة والشبكات، وتحسين الأداء. ماهر في أنظمة Windows وLinux، الشبكات، أمان المعلومات، وأدوات الدعم مثل Jira.",
     btnHireMe: "تواصل معي",
+    btnHireMe2: " اعمالي ",
     btnMyWork: "السيرة الذاتية",
 
     footerCopyright: "© 2025 جميع الحقوق محفوظة - وحيد أحمد",
@@ -93,6 +94,7 @@ const translations = {
     heroTitle: "IT Specialist",
     heroAboutMe: "Experienced IT Specialist with a background in user support, system and network management, and performance optimization. Skilled in Windows, Linux, networking, cybersecurity, and support tools like Jira.",
     btnHireMe: "Hire Me",
+btnHireMe2: " my wroks ",
     btnMyWork: "Resume",
 
     footerCopyright: "© 2025 All rights reserved - Wahed Ahmed",
