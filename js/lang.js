@@ -10,7 +10,7 @@ const translations = {
     navResume: "السيرة الذاتية",
     navWork: "الأعمال",
     navContact: "تواصل",
-    navLang: "اللغة",
+    navLang: "AR",
 
     heroGreeting: "مرحباً، أنا وحيد أحمد",
     heroTitle: "مهندس برمجيات وأخصائي تقنية معلومات",
@@ -94,7 +94,7 @@ const translations = {
     navResume: "Resume",
     navWork: "Work",
     navContact: "Contact",
-    navLang: "Language",
+    navLang: "EN",
 
     heroGreeting: "Hello, I'm Wahed Ahmed",
     heroTitle: "Software Engineer & IT Specialist",
