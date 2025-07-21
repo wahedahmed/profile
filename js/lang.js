@@ -144,7 +144,7 @@ const translations = {
     langEnglish: "English - Professional",
 
     workHeading: "My Portfolio",
-    project1Title: "Charity Association System",
+    project1Title: "Charity Association ",
     project1Desc: " Full system to manage Donations, purchasing, distribution, and reporting in a Charity Association .",
     project2Title: "Interactive restaurant website",
     project2Desc: "A professional website to showcase your restaurant's most popular meals, customer reviews, and communicate in an attractive and easy-to-use way..",
