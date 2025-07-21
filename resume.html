@@ -3,83 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title data-lang-key="pageTitle">السيرة الذاتية | وحيد أحمد</title>
+  <title data-lang-key="pageTitleResume">السيرة الذاتية | وحيد أحمد</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-  <style>
-    body {
-      font-family: 'Cairo', sans-serif;
-      background-color: #f5f7fa;
-      color: #2c2c2c;
-      line-height: 1.9;
-    }
-    .navbar {
-      font-weight: bold;
-    }
-    .resume-section {
-      padding: 4rem 1rem;
-    }
-    .resume-section h2 {
-      font-size: 2.2rem;
-      font-weight: bold;
-      margin-bottom: 2.5rem;
-      text-align: center;
-    }
-    .resume-section h4 {
-      font-size: 1.3rem;
-      color: #007bff;
-      margin-bottom: 1.2rem;
-      border-bottom: 2px solid #007bff;
-      padding-bottom: 6px;
-    }
-    .resume-section h5 {
-      font-size: 1.2rem;
-      margin-bottom: 0.3rem;
-      font-weight: bold;
-    }
-    .resume-section ul {
-      list-style: none;
-      padding-right: 1.5rem;
-    }
-    .resume-section ul li {
-      position: relative;
-      padding-right: 1.5rem;
-      margin-bottom: 0.75rem;
-    }
-    .resume-section ul li::before {
-      content: "\f058";
-      font-family: "Font Awesome 6 Free";
-      font-weight: 900;
-      color: #007bff;
-      position: absolute;
-      right: 0;
-      top: 2px;
-      font-size: 0.9rem;
-    }
-    .resume-section .text-muted {
-      font-size: 0.95rem;
-      color: #666 !important;
-      margin-bottom: 0.5rem;
-    }
-    .resume-section p {
-      margin-bottom: 0.5rem;
-      font-size: 1.05rem;
-    }
-    footer {
-      background-color: #212529;
-      color: #ccc;
-      padding: 1rem 0;
-      text-align: center;
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/lang.js" defer></script>
 </head>
 <body>
+  <div class="animated-bg"></div>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
   <div class="container">
     <a class="navbar-brand" href="index.html">
       <img src="img/user.jpg" alt="وحيد أحمد" width="40" height="40" class="rounded-circle me-2">
-      <span data-lang-key="name">وحيد أحمد</span>
+      <span class="fw-bold">Wahed Ahmed</span>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
@@ -103,184 +40,145 @@
 </nav>
 
 <div class="container resume-section">
-  <h2 data-lang-key="resumeTitle">السيرة الذاتية</h2>
+  <h2 data-lang-key="resumeHeading"></h2>
 
   <div class="text-center my-4">
-  <a href="assets/Wahed_Ahmed_IT_CV.pdf" download class="btn btn-primary">
-    <i class="fas fa-download me-2"></i> <span data-lang-key="downloadCV">تحميل السيرة الذاتية</span>
-  </a>
-</div>
+    <a href="assets/Wahed_Ahmed_IT_CV.pdf" download class="btn btn-primary">
+      <i class="fas fa-download me-2"></i> تحميل السيرة الذاتية (PDF)
+    </a>
+  </div>
 
   <div>
-    <h4 data-lang-key="summaryTitle">الملخص الاحترافي</h4>
-    <p data-lang-key="summaryContent">أخصائي تقنية معلومات بخبرة واسعة في دعم الأنظمة والشبكات وحل المشكلات التقنية، ماهر في أنظمة Windows وLinux، إدارة الأداء، الأمان، والتوثيق.</p>
+    <h4 data-lang-key="profSummaryTitle"></h4>
+    <p data-lang-key="profSummaryContent"></p>
   </div>
 
   <div class="mt-5">
-    <h4 data-lang-key="experienceTitle">الخبرات المهنية</h4>
+    <h4 data-lang-key="experienceTitle"></h4>
+    <!-- دمج جميع الخبرات هنا -->
     <div class="mb-3">
-      <h5 data-lang-key="job1Title">فني دعم تقنية معلومات</h5>
-      <p class="text-muted" data-lang-key="job1Company">شركة ضوء الشعلة الكهربائية | مارس 2023 - مايو 2024</p>
+      <h5 data-lang-key="expJobTitle1"></h5>
+      <p class="text-muted" data-lang-key="expCompany1"></p>
       <ul>
-        <li data-lang-key="job1_1">دعم المستخدمين وإصلاح مشاكل الأجهزة والبرمجيات.</li>
-        <li data-lang-key="job1_2">إدارة حسابات Active Directory وتطبيق إجراءات الأمان.</li>
-        <li data-lang-key="job1_3">تنفيذ نسخ احتياطية وصيانة الأصول التقنية.</li>
+        <li data-lang-key="expDuty1_1"></li>
+        <li data-lang-key="expDuty1_2"></li>
+        <li data-lang-key="expDuty1_3"></li>
+        <li data-lang-key="expDuty1_4"></li>
+      </ul>
+    </div>
+    <div class="mb-3">
+      <h5 data-lang-key="expJobTitle2"></h5>
+      <p class="text-muted" data-lang-key="expCompany2"></p>
+      <ul>
+        <li data-lang-key="expDuty2_1"></li>
+        <li data-lang-key="expDuty2_2"></li>
       </ul>
     </div>
     <div>
-      <h5 data-lang-key="job2Title">مساعد تقنية معلومات</h5>
-      <p class="text-muted" data-lang-key="job2Company">شركة ضوء الشعلة الكهربائية | يوليو 2022 - فبراير 2023</p>
+      <h5 data-lang-key="expJobTitle3"></h5>
+      <p class="text-muted" data-lang-key="expCompany3"></p>
       <ul>
-        <li data-lang-key="job2_1">الاستجابة للدعم الفني وتثبيت الأجهزة.</li>
-        <li data-lang-key="job2_2">المساعدة في إدارة الشبكات وتأمين الأنظمة.</li>
-        <li data-lang-key="job2_3">توثيق الإجراءات وتثبيت برامج الحماية.</li>
+        <li data-lang-key="expDuty3_1"></li>
+        <li data-lang-key="expDuty3_2"></li>
+      </ul>
+    </div>
+    <div class="mb-3">
+      <h5>IT Support Technician</h5>
+      <p class="text-muted">Shuaa Electric Company – Mar 2023 to May 2024</p>
+      <ul>
+        <li>Provided end-user support and resolved hardware, software, and network issues.</li>
+        <li>Installed and maintained systems and enterprise applications.</li>
+        <li>Managed user accounts via Active Directory and ensured secure access.</li>
+        <li>Maintained IT asset records and implemented backup routines.</li>
+      </ul>
+    </div>
+    <div class="mb-3">
+      <h5>IT Assistant</h5>
+      <ul>
+        <li>Responded to technical support requests across various channels.</li>
+        <li>Assisted in maintaining network connectivity and system security.</li>
+        <li>Installed and configured IT equipment and peripherals.</li>
+        <li>Documented standard IT procedures and supported antivirus operations.</li>
       </ul>
     </div>
   </div>
 
   <div class="mt-5">
-    <h4 data-lang-key="educationTitle">التعليم</h4>
-    <p data-lang-key="educationDegree">بكالوريوس في تقنية المعلومات – المعهد العالي للإدارة والتكنولوجيا</p>
-    <p class="text-muted" data-lang-key="educationDate">أغسطس 2018 - أغسطس 2021</p>
-    <p data-lang-key="educationNote">التقدير: جيد | مشروع التخرج: نظام إدارة مصنع الألبان (التقدير: ممتاز)</p>
-  </div>
-
-  <div class="mt-5">
-    <h4 data-lang-key="certsTitle">الشهادات</h4>
+    <h4 data-lang-key="educationTitle"></h4>
     <ul>
-      <li data-lang-key="cert1">MCSA - شهادة حلول مايكروسوفت</li>
-      <li data-lang-key="cert2">CCNA - شهادة شبكات سيسكو</li>
+      <li>
+        <span data-lang-key="eduDegree"></span><br>
+        <span data-lang-key="eduDates"></span><br>
+        <span data-lang-key="eduGrade"></span>
+      </li>
     </ul>
   </div>
 
   <div class="mt-5">
-    <h4 data-lang-key="languagesTitle">اللغات</h4>
+    <h4 data-lang-key="certificationsTitle"></h4>
     <ul>
-      <li data-lang-key="lang1">العربية - لغة الأم</li>
-      <li data-lang-key="lang2">الإنجليزية - محترف</li>
+      <li data-lang-key="cert1"></li>
+      <li data-lang-key="cert2"></li>
+    </ul>
+  </div>
+
+  <div class="mt-5">
+    <h4>المهارات التقنية</h4>
+    <ul>
+      <li>أنظمة التشغيل: Windows, Linux</li>
+      <li>الشبكات: LAN/WAN, DHCP, DNS, VPN</li>
+      <li>الأنظمة: Active Directory, Office 365, Windows Server</li>
+      <li>الحماية: Antivirus, Access Control, Backup</li>
+      <li>الدعم والأدوات: Jira, Remote Desktop, Ticketing, Microsoft Office, Documentation</li>
+      <li>تطوير البرمجيات: JavaScript, HTML, CSS, SQL, React, Bootstrap</li>
+      <li>مهارات عامة: تحليل البيانات، العمل الجماعي، حل المشكلات، تواصل فعال</li>
+    </ul>
+  </div>
+
+  <div class="mt-5">
+    <h4 data-lang-key="languagesTitle"></h4>
+    <ul>
+      <li data-lang-key="langArabic"></li>
+      <li data-lang-key="langEnglish"></li>
     </ul>
   </div>
 </div>
 
-
-  <div id="myModal" class="modal fade" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header bg-dark text-white">
-          <h5 class="modal-title" data-lang-key="modalTitle"><i class="fas fa-comments me-2"></i> تواصل معي</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body text-center">
-          <p class="mb-4" data-lang-key="contactDesc">اختر وسيلة للتواصل</p>
-          <a href="https://wa.me/+966590525341" target="_blank" class="btn btn-success mb-2" data-lang-key="whatsappBtnText"><i class="fab fa-whatsapp"></i> واتساب</a>
-          <a href="https://t.me/waheedahmed001" target="_blank" class="btn btn-primary mb-2" data-lang-key="telegramBtnText"><i class="fab fa-telegram"></i> تلجرام</a>
-          <a href="mailto:wahedahmed.wa22@gmail.com" class="btn btn-dark" data-lang-key="emailContact"><i class="fas fa-envelope"></i> بريد إلكتروني</a>
+  <!-- Modal -->
+<div id="myModal" class="modal fade" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content contact-modal">
+      <div class="modal-header bg-gradient-primary text-white">
+        <h5 class="modal-title" data-lang-key="modalTitle">
+          <i class="fa-solid fa-envelope-open-text me-2"></i>
+        </h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body text-center">
+        <p class="mb-4" data-lang-key="contactDesc"></p>
+        <div class="d-flex flex-column gap-3 align-items-center">
+          <a href="https://wa.me/+966590525341" target="_blank" class="btn btn-success contact-btn" data-lang-key="whatsappBtnText">
+            <i class="fab fa-whatsapp me-2"></i> واتساب
+          </a>
+          <a href="https://t.me/waheedahmed001" target="_blank" class="btn btn-primary contact-btn" data-lang-key="telegramBtnText">
+            <i class="fab fa-telegram me-2"></i> تلجرام
+          </a>
+          <a href="mailto:wahedahmed.wa22@gmail.com" class="btn btn-dark contact-btn" data-lang-key="emailContact">
+            <i class="fa-solid fa-envelope me-2"></i> بريد إلكتروني
+          </a>
         </div>
       </div>
     </div>
   </div>
-<footer>
-  <p data-lang-key="footer">&copy; 2025 جميع الحقوق محفوظة - وحيد أحمد</p>
+</div>
+
+
+
+<footer class="footer bg-dark text-white py-3 mt-auto">
+  <div class="container text-center">
+    <p class="mb-0" data-lang-key="footerCopyright"></p>
+  </div>
 </footer>
-
-<script>
-  const translations = {
-    ar: {
-      downloadCV: "تحميل السيرة الذاتية",   // داخل اللغة العربية
-      pageTitle: "السيرة الذاتية | وحيد أحمد",
-      name: "وحيد أحمد",
-      navProfile: "الملف الشخصي",
-      navSkills: "المهارات",
-      navResume: "السيرة الذاتية",
-      navWork: "الأعمال",
-      navLang: "اللغة",
-      resumeTitle: "السيرة الذاتية",
-      summaryTitle: "الملخص الاحترافي",
-      summaryContent: "أخصائي تقنية معلومات بخبرة واسعة في دعم الأنظمة والشبكات وحل المشكلات التقنية، ماهر في أنظمة Windows وLinux، إدارة الأداء، الأمان، والتوثيق.",
-      experienceTitle: "الخبرات المهنية",
-      job1Title: "فني دعم تقنية معلومات",
-      job1Company: "شركة ضوء الشعلة الكهربائية | مارس 2023 - مايو 2024",
-      job1_1: "دعم المستخدمين وإصلاح مشاكل الأجهزة والبرمجيات.",
-      job1_2: "إدارة حسابات Active Directory وتطبيق إجراءات الأمان.",
-      job1_3: "تنفيذ نسخ احتياطية وصيانة الأصول التقنية.",
-      job2Title: "مساعد تقنية معلومات",
-      job2Company: "شركة ضوء الشعلة الكهربائية | يوليو 2022 - فبراير 2023",
-      job2_1: "الاستجابة للدعم الفني وتثبيت الأجهزة.",
-      job2_2: "المساعدة في إدارة الشبكات وتأمين الأنظمة.",
-      job2_3: "توثيق الإجراءات وتثبيت برامج الحماية.",
-      educationTitle: "التعليم",
-      educationDegree: "بكالوريوس في تقنية المعلومات – المعهد العالي للإدارة والتكنولوجيا",
-      educationDate: "أغسطس 2018 - أغسطس 2021",
-      educationNote: "التقدير: جيد | مشروع التخرج: نظام إدارة مصنع الألبان (التقدير: ممتاز)",
-      certsTitle: "الشهادات",
-      cert1: "MCSA - شهادة حلول مايكروسوفت",
-      cert2: "CCNA - شهادة شبكات سيسكو",
-      languagesTitle: "اللغات",
-      lang1: "العربية - لغة الأم",
-      lang2: "الإنجليزية - محترف",
-      footer: "© 2025 جميع الحقوق محفوظة - وحيد أحمد"
-    },
-    en: {
-      downloadCV: "Download CV",              // داخل اللغة الإنجليزية
-      pageTitle: "Resume | Wahed Ahmed",
-      name: "Wahed Ahmed",
-      navProfile: "Profile",
-      navSkills: "Skills",
-      navResume: "Resume",
-      navWork: "Work",
-      navLang: "Language",
-      resumeTitle: "Resume",
-      summaryTitle: "Professional Summary",
-      summaryContent: "IT specialist with extensive experience in system and network support, troubleshooting, and documentation. Skilled in Windows, Linux, performance management, and security.",
-      experienceTitle: "Professional Experience",
-      job1Title: "IT Support Technician",
-      job1Company: "Daw Al Shoala Electric Co. | Mar 2023 - May 2024",
-      job1_1: "Supported users and resolved hardware/software issues.",
-      job1_2: "Managed Active Directory accounts and applied security procedures.",
-      job1_3: "Performed backups and maintained IT assets.",
-      job2Title: "IT Assistant",
-      job2Company: "Daw Al Shoala Electric Co. | Jul 2022 - Feb 2023",
-      job2_1: "Responded to technical support and installed devices.",
-      job2_2: "Assisted with network management and system security.",
-      job2_3: "Documented procedures and installed antivirus software.",
-      educationTitle: "Education",
-      educationDegree: "BSc in Information Technology – High Institute for Management & Technology",
-      educationDate: "Aug 2018 - Aug 2021",
-      educationNote: "Grade: Good | Graduation project: Dairy Factory Management System (Grade: Excellent)",
-      certsTitle: "Certifications",
-      cert1: "MCSA - Microsoft Certified Solutions Associate",
-      cert2: "CCNA - Cisco Certified Network Associate",
-      languagesTitle: "Languages",
-      lang1: "Arabic - Native",
-      lang2: "English - Professional",
-      footer: "© 2025 All rights reserved - Wahed Ahmed"
-    }
-  };
-
-  document.querySelectorAll("[data-lang-set]").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const lang = btn.getAttribute("data-lang-set");
-      localStorage.setItem("lang", lang);
-      applyLang(lang);
-    });
-  });
-
-  function applyLang(lang) {
-    document.querySelectorAll("[data-lang-key]").forEach(el => {
-      const key = el.getAttribute("data-lang-key");
-      if (translations[lang] && translations[lang][key]) {
-        el.textContent = translations[lang][key];
-        if (el.tagName === "TITLE") document.title = translations[lang][key];
-      }
-    });
-    document.documentElement.lang = lang;
-    document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
-  }
-
-  const savedLang = localStorage.getItem("lang") || "ar";
-  applyLang(savedLang);
-</script>
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

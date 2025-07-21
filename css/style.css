@@ -1,159 +1,128 @@
+/* style.css */
 
-/* الخط العام */
+
 body {
-  font-family: 'Cairo', sans-serif;
+  position: relative;
+  min-height: 100vh;
+  /* باقي التنسيقات الأساسية تبقى كما هي */
+}
+
+.animated-bg {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background: linear-gradient(270deg, #57c4e5, #b6e5a3, #f3e47c, #f29387, #7f9cf5, #22c55e, #007bff, #57c4e5);
+  background-size: 1600% 1600%;
+  animation: gradientMove 19s ease-in-out infinite;
+  opacity: 0.19;
+  pointer-events: none;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  25% { background-position: 50% 100%; }
+  50% { background-position: 100% 50%; }
+  75% { background-position: 50% 0%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+
+
+
+
+
+
+body {
+  font-family: 'Cairo', 'Tajawal', sans-serif;
   line-height: 1.7;
   background: linear-gradient(to bottom, #f7f9fc 0%, #ffffff 100%);
   color: #333;
   transition: background 0.4s, color 0.4s;
 }
-
-/* الوضع الليلي */
 .dark-mode {
   background-color: #121212;
   color: #e0e0e0;
 }
+a { color: #007bff; transition: color 0.3s; }
+a:hover { color: #0056b3; }
+h1, h2, h3, h4 { font-weight: 700; }
+h1.display-4, h1.display-5 { font-size: 2.5rem; font-weight: bold; margin-bottom: .7rem; }
+h2 { font-size: 2rem; margin-bottom: 1.5rem; border-bottom: 2px solid #ccc; display: inline-block; padding-bottom: 5px; }
+h3.lead { font-size: 1.5rem; color: #007bff; }
+p.fs-5 { max-width: 720px; margin: auto; line-height: 1.8; }
+.profile-section { padding: 4rem 1rem; text-align: center; }
+.profile-img { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 10px rgba(0,0,0,0.15); margin-bottom: 1.5rem; }
+.btn-lg { font-size: 1.1rem; padding: .6rem 1.4rem; border-radius: 8px; }
+.btn-primary { background-color: #007bff; border: none; color: #fff; font-weight: bold; transition: all 0.3s; }
+.btn-primary:hover { background-color: #0056b3; transform: translateY(-2px); }
+.btn-outline-secondary { border-color: #ccc; color: #333; }
+.btn-outline-secondary:hover { background-color: #f0f0f0; }
+.skill-card, .project-card { transition: transform 0.3s; }
+.skill-card:hover, .project-card:hover { transform: scale(1.03); }
+.footer { background: #222; color: #bbb; padding: 1rem 0; text-align: center; }
+.footer a { color: #999; }
+.footer a:hover { color: #fff; }
+#themeToggle { background: none; border: none; font-size: 1.3rem; color: #ffc107; cursor: pointer; }
+html, body { height: 100%; margin: 0; display: flex; flex-direction: column; }
+.main-content-wrapper { flex: 1; }
+body.dark-mode { background-color: #121212; color: #f0f0f0; }
+.dark-mode .navbar, .dark-mode .footer { background-color: #1f1f1f !important; }
+.dark-mode h4 { color: #66b2ff; border-color: #66b2ff; }
+.dark-mode .text-muted { color: #aaa !important; }
+/* Resume Section */
+.resume-section { padding: 4rem 1rem; }
+.resume-section h2 { font-size: 2.2rem; font-weight: bold; margin-bottom: 2.5rem; text-align: center; }
+.resume-section h4 { font-size: 1.3rem; color: #007bff; margin-bottom: 1.2rem; border-bottom: 2px solid #007bff; padding-bottom: 6px; }
+.resume-section h5 { font-size: 1.2rem; margin-bottom: 0.3rem; font-weight: bold; }
+.resume-section ul { list-style: none; padding-right: 1.5rem; }
+.resume-section ul li { position: relative; padding-right: 1.5rem; margin-bottom: 0.75rem; }
+.resume-section ul li::before { content: "\f058"; font-family: "Font Awesome 6 Free"; font-weight: 900; color: #007bff; position: absolute; right: 0; top: 2px; font-size: 0.9rem; }
+.resume-section .text-muted { font-size: 0.95rem; color: #666 !important; margin-bottom: 0.5rem; }
+.resume-section p { margin-bottom: 0.5rem; font-size: 1.05rem; }
 
-a {
-  color: #007bff;
-  transition: color 0.3s ease;
-}
 
-a:hover {
-  color: #0056b3;
-}
-
-/* العناوين والنصوص */
-h1, h2, h3, h4 {
-  font-weight: 700;
-}
-
-h1.display-4 {
-  font-size: 2.8rem;
-  font-weight: bold;
-  margin-bottom: 0.7rem;
-}
-
-h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  border-bottom: 2px solid #ccc;
-  display: inline-block;
-  padding-bottom: 5px;
-}
-
-h3.lead {
-  font-size: 1.5rem;
-  color: #007bff;
-}
-
-p.fs-5 {
-  max-width: 720px;
-  margin: auto;
-  line-height: 1.8;
-}
-
-/* الصورة الشخصية */
-.profile-section {
-  padding: 4rem 1rem;
-  text-align: center;
-}
-
-.profile-img {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 0 10px rgba(0,0,0,0.15);
-  margin-bottom: 1.5rem;
-}
-
-/* الأزرار */
-.btn-lg {
-  font-size: 1.1rem;
-  padding: 0.6rem 1.4rem;
-  border-radius: 8px;
-}
-
-.btn-primary {
-  background-color: #007bff;
+/* تصميم مودال التواصل */
+.contact-modal {
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(80, 80, 160, 0.17);
   border: none;
-  transition: all 0.3s ease;
-  color: white;
-  font-weight: bold;
 }
-
-.btn-primary:hover {
-  background-color: #0056b3;
-  transform: translateY(-2px);
+.contact-modal .modal-header {
+  background: linear-gradient(90deg, #007bff 10%, #22c55e 100%);
+  color: #fff !important;
+  border-bottom: none;
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
 }
-
-.btn-outline-secondary {
-  border-color: #ccc;
-  color: #333;
-}
-
-.btn-outline-secondary:hover {
-  background-color: #f0f0f0;
-}
-
-/* الفوتر */
-.footer {
-  background: #222;
-  color: #bbb;
-}
-
-.footer a {
-  color: #999;
-}
-
-.footer a:hover {
-  color: white;
-}
-
-/* زر الوضع الليلي */
-#themeToggle {
-  background: none;
-  border: none;
+.contact-modal .modal-title {
   font-size: 1.3rem;
-  color: #ffc107;
-  cursor: pointer;
-}
-
-/* جعل الفوتر في الأسفل دائمًا */
-html, body {
-  height: 100%;
-  margin: 0;
+  font-weight: bold;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  gap: 6px;
 }
-
-.main-content-wrapper {
-  flex: 1;
+.contact-btn {
+  min-width: 210px;
+  font-size: 1.09rem;
+  padding: 0.7rem 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+  transition: transform 0.18s;
 }
-
-.footer {
-  background: #222;
-  color: #bbb;
-  padding: 1rem 0;
-  text-align: center;
+.contact-btn:hover {
+  transform: scale(1.035);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.09);
 }
-
-
-
-
-body.dark-mode {
-  background-color: #121212;
-  color: #f0f0f0;
-}
-.dark-mode .navbar, 
-.dark-mode footer {
-  background-color: #1f1f1f !important;
-}
-.dark-mode h4 {
-  color: #66b2ff;
-  border-color: #66b2ff;
-}
-.dark-mode .text-muted {
-  color: #aaa !important;
+@media (max-width: 480px) {
+  .contact-modal .modal-dialog {
+    margin: 1rem;
+  }
+  .contact-btn { min-width: 160px; font-size: 1rem; }
 }
