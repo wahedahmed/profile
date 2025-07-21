@@ -58,8 +58,8 @@ p.fs-5 { max-width: 720px; margin: auto; line-height: 1.8; }
 .btn-lg { font-size: 1.1rem; padding: .6rem 1.4rem; border-radius: 8px; }
 .btn-primary { background-color: #007bff; border: none; color: #fff; font-weight: bold; transition: all 0.3s; }
 .btn-primary:hover { background-color: #0056b3; transform: translateY(-2px); }
-.btn-outline-secondary { border-color: #ccc; color: #333; }
-.btn-outline-secondary:hover { background-color: #f0f0f0; }
+.btn-outline-secondary { border-color: #ccc; color: #18720c; }
+.btn-outline-secondary:hover { background-color: #137e24; }
 .skill-card, .project-card { transition: transform 0.3s; }
 .skill-card:hover, .project-card:hover { transform: scale(1.03); }
 .footer { background: #222; color: #bbb; padding: 1rem 0; text-align: center; }
